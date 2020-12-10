@@ -1,0 +1,29 @@
+<!-- OneTrust Privacy Notice Bundle start -->
+
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="countryDropdown"></select>
+<select id="stateDropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
+
+<script src="https://qa-ds-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
+    bundleUrl="https://qa-ds-cdn.1trust.app/9f2f4efb-d1e9-405f-8dda-43054488121b/notice-bundles/draft/2a4d0d99-c3df-48b7-bc76-2155cd13593e.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["countryDropdown", "stateDropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
